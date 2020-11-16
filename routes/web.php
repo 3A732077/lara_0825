@@ -43,6 +43,6 @@ use App\Models\Post;
 //$post = Post::find(1);
 //$post->delete();
 
-//Post::destroy(5);
+Post::destroy(5);
 
-//Post::destroy(6,7);
+Post::destroy(6,7);
