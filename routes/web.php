@@ -24,8 +24,13 @@ use App\Models\Post;
 
 //Post::create(['title'=>'test title','content'=>'test content',]);
 
-$post=new Post();
-$post->title='test title';
-$post->content='test content';
-$post->save();
+//$post=new Post();
+//$post->title='test title';
+//$post->content='test content';
+//$post->save();
 
+$post=Post::find(1);
+$post->update([
+    'title'=>'updated title',
+    'content'=>'updated content',
+]);
