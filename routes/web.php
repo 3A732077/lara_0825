@@ -43,6 +43,12 @@ use App\Models\Post;
 //$post = Post::find(1);
 //$post->delete();
 
-Post::destroy(5);
+//Post::destroy(5);
+//
+//Post::destroy(6,7);
 
-Post::destroy(6,7);
+$allPosts=Post::all();
+dd($allPosts);
+
+$featuredPosts=Post::where('is_feature',1)->get();
+dd($featuredPosts);
