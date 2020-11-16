@@ -22,7 +22,10 @@ use App\Models\Post;
 //Route::get('/about',[\App\Http\Controllers\PostsController::class,'about'])->name('posts.about');
 //Route::get('/contact',[\App\Http\Controllers\PostsController::class,'contact'])->name('posts.contact');
 
-Post::create(['title'=>'test title','content'=>'test content',]);
+//Post::create(['title'=>'test title','content'=>'test content',]);
 
-
+$post=new Post();
+$post->title='test title';
+$post->content='test content';
+$post->save();
 
