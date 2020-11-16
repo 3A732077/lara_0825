@@ -29,8 +29,13 @@ use App\Models\Post;
 //$post->content='test content';
 //$post->save();
 
-$post=Post::find(1);
-$post->update([
-    'title'=>'updated title',
-    'content'=>'updated content',
-]);
+//$post=Post::find(1);
+//$post->update([
+//    'title'=>'updated title',
+//    'content'=>'updated content',
+//]);
+
+$post = Post::find(1);
+$post->title='saved title';
+$post->content='saved content';
+$post->save();
