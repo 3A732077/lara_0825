@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Post;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,12 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+//
+//Route::get('/posts',[\App\Http\Controllers\PostsController::class,'index'])->name('posts.index');
+//Route::get('/post',[\App\Http\Controllers\PostsController::class,'show'])->name('posts.show');
+//Route::get('/about',[\App\Http\Controllers\PostsController::class,'about'])->name('posts.about');
+//Route::get('/contact',[\App\Http\Controllers\PostsController::class,'contact'])->name('posts.contact');
 
-Route::get('/posts',[\App\Http\Controllers\PostsController::class,'index'])->name('posts.index');
-Route::get('/post',[\App\Http\Controllers\PostsController::class,'show'])->name('posts.show');
-Route::get('/about',[\App\Http\Controllers\PostsController::class,'about'])->name('posts.about');
-Route::get('/contact',[\App\Http\Controllers\PostsController::class,'contact'])->name('posts.contact');
+Post::create(['title'=>'test title','content'=>'test content',]);
+
+
 
