@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
+use App\Models\Comment;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,5 +58,10 @@ use App\Models\Post;
 //$fourthPost=Post::find(8);
 //dd($fourthPost);
 
-$lastPost=Post::orderBy('id','DESC')->first();
-dd($lastPost);
+//$lastPost=Post::orderBy('id','DESC')->first();
+//dd($lastPost);
+
+$Comment=new Comment();
+$Comment->content='12324';
+$Comment->post_id='10';
+$Comment->save();
