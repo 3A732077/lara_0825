@@ -53,6 +53,8 @@ use App\Models\Post;
 //$featuredPosts=Post::where('is_feature',1)->get();
 //dd($featuredPosts);
 
-$fourthPost=Post::find(8);
-dd($fourthPost);
+//$fourthPost=Post::find(8);
+//dd($fourthPost);
 
+$lastPost=Post::orderBy('id','DESC')->first();
+dd($lastPost);
