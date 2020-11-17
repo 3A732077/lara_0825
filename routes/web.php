@@ -61,7 +61,13 @@ use App\Models\Comment;
 //$lastPost=Post::orderBy('id','DESC')->first();
 //dd($lastPost);
 
-$Comment=new Comment();
-$Comment->content='12324';
-$Comment->post_id='10';
-$Comment->save();
+//$Comment=new Comment();
+//$Comment->content='12324';
+//$Comment->post_id='10';
+//$Comment->save();
+
+$post=Post::find(8);
+foreach($post->comments as $comment)
+{
+    echo $comment->content.'<br>';
+}
